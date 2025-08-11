@@ -6,7 +6,7 @@ The project is structured with a clear separation of concerns. The HTML files de
 
 Key Features
 Home Page: A welcoming landing page that introduces the project with a hero section and provides easy navigation to other parts of the site.
-
+![Image Alt]()
 Books Page: A dedicated section for Browse books. It includes a responsive slider for featured books and a curated list of top-selling titles.
 
 User Management: A system for user authentication, including a page for new users to join and existing users to log in.
