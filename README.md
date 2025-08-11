@@ -6,7 +6,7 @@ The project is structured with a clear separation of concerns. The HTML files de
 
 Key Features
 Home Page: A welcoming landing page that introduces the project with a hero section and provides easy navigation to other parts of the site.
-![Image Alt]()
+![Image Alt](https://github.com/SheikhSaniya123/LibraryPro---Library-Management-System/blob/cd62e623c2f9244d44cbbb0144147827cde95bdd/Assets/Media/Screenshot%202025-08-12%20045719.png)
 Books Page: A dedicated section for Browse books. It includes a responsive slider for featured books and a curated list of top-selling titles.
 
 User Management: A system for user authentication, including a page for new users to join and existing users to log in.
