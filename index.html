@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="/Assets/css/styles.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo">
+    <i class="bx bx-book"></i>
+    <span>LibraryPro</span>
+  </div>
+  <div class="nav-links">
+    <a href="/index.html">
+      <i class="bx bx-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="/Assets/pages/book.html">
+      <i class="bx bx-book-open"></i>
+      <span>Books</span>
+    </a>
+    <a href="/Assets//pages/join.html">
+      <i class="bx bx-user"></i>
+      <span>Join</span>
+    </a>
+    <a href="/Assets//pages/contact.html">
+      <i class="bx bx-info-circle"></i>
+      <span>contact</span>
+    </a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <i class="bx bx-menu"></i>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <span>Library</span> &gt; <span>Management System</span>
+    </div>
+    <h1>Welcome to Our Library</h1>
+    <p>Discover a world of knowledge. Manage books, members, and transactions seamlessly with our advanced library management system.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">Explore Books</a>
+      <a href="#" class="btn-secondary">
+        <i class="bx bx-user"></i> Manage Members
+      </a>
+    </div>
+  </div>
+</section>
+<!-- Book Catalog Section -->
+<section class="book-catalog">
+  <div class="section-header">
+    <h2>Book Catalog</h2>
+    <p class="section-subtitle">Explore our vast collection of books across genres.</p>
+  </div>
+
+  <!-- Search and Filters -->
+  <div class="search-filter">
+    <input type="text" id="searchBar" placeholder="Search by title, author, or genre...">
+    <select id="genreFilter">
+      <option value="all">All Genres</option>
+      <option value="fiction">Fiction</option>
+      <option value="non-fiction">Non-Fiction</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <option value="biography">Biography</option>
+    </select>
+    <select id="availabilityFilter">
+      <option value="all">All</option>
+      <option value="available">Available</option>
+      <option value="unavailable">Unavailable</option>
+    </select>
+  </div>
+
+  <!-- Book Grid -->
+  <div class="book-grid" id="bookGrid">
+    <!-- Book cards will be dynamically added here -->
+  </div>
+</section>
+<!-- Member Management Section -->
+<section class="member-management">
+  <div class="section-header">
+    <h2>Member Management</h2>
+    <p class="section-subtitle">Manage library members and their activities seamlessly.</p>
+  </div>
+
+  <!-- Member Profiles -->
+  <div class="member-profiles">
+    <h3>Member Profiles</h3>
+    <div class="profiles-grid" id="profilesGrid">
+      <!-- Member profiles will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Borrowed Items -->
+  <div class="borrowed-items">
+    <h3>Borrowed Items</h3>
+    <div class="items-grid" id="itemsGrid">
+      <!-- Borrowed items will be dynamically added here -->
+    </div>
+  </div>
+  <!-- Fine Calculator -->
+<div class="fine-calculator">
+  <h3>Fine Calculator</h3>
+  <div class="calculator-container">
+    <form id="fineForm">
+      <div class="input-group">
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" required>
+      </div>
+      <div class="input-group">
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate" required>
+      </div>
+      <button type="submit">Calculate Fine</button>
+    </form>
+    <div class="fine-result" id="fineResult">
+      <!-- Fine result will be displayed here -->
+    </div>
+  </div>
+</div>
+</section>
+<!-- Events & Announcements Section -->
+<section class="events-announcements">
+  <div class="section-header">
+    <h2>📅 Upcoming Events & Announcements</h2>
+    <p class="section-subtitle">Stay ahead of the latest book festivals, workshops, and library announcements.</p>
+  </div>
+
+  <div class="events-wrapper">
+    <!-- Sidebar Quick Links -->
+    <aside class="events-sidebar">
+      <h3>🔗 Quick Links</h3>
+      <ul>
+        <li><a href="#">📆 Event Calendar</a></li>
+        <li><a href="#">📢 Announcements</a></li>
+        <li><a href="#">🎟️ Register for Events</a></li>
+        <li><a href="#">🗣️ Guest Speakers</a></li>
+        <li><a href="#">📚 Book Launches</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Events Section -->
+    <div class="events-content">
+      <!-- Featured Event -->
+      <div class="featured-event">
+        <div class="featured-event-overlay"></div>
+        <div class="featured-event-content">
+          <h3>📖 Special Guest: Yuval Noah Harari</h3>
+          <p>Join the bestselling author of *Sapiens* for an exclusive session.</p>
+          <span class="event-meta">🗓️ April 15, 2025 | 🕒 6:00 PM | 📍 Main Auditorium</span>
+          <a href="#" class="rsvp-button">🔔 RSVP Now</a>
+        </div>
+      </div>
+
+      <!-- Live News Ticker -->
+      <div class="news-ticker">
+        <marquee>📢 Library closed on April 25. 🎉 Book Festival on April 30. 💡 New e-books available for members.</marquee>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="event-search">
+        <input type="text" id="eventSearch" placeholder="🔍 Search Events..." onkeyup="searchEvents()">
+      </div>
+
+      <!-- Countdown Timer -->
+      <div class="countdown-container">
+        <p>⏳ Next Event Starts In: <span id="eventCountdown">Loading...</span></p>
+      </div>
+
+      <!-- Upcoming Events -->
+      <h3>📌 Upcoming Events</h3>
+      <div class="events-grid" id="eventsGrid"></div>
+      <!-- 📜 Past Events Section -->
+<h3>📜 Past Events</h3>
+<div class="past-events-wrapper">
+  <!-- Timeline View -->
+  <div class="timeline">
+    <div class="timeline-event">
+      <div class="event-date">March 20, 2025</div>
+      <div class="timeline-content">
+        <h4>🎤 Coding Workshop</h4>
+        <p>Learned Python & JavaScript in a hands-on session.</p>
+        <a href="#" class="read-more">📖 Read More</a>
+      </div>
+    </div>
+
+    <div class="timeline-event">
+      <div class="event-date">March 10, 2025</div>
+      <div class="timeline-content">
+        <h4>📚 National Book Festival</h4>
+        <p>A celebration of books, authors, and readers!</p>
+        <a href="#" class="read-more">📖 Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Gallery for Past Events -->
+  <div class="event-gallery">
+    <img src="https://via.placeholder.com/300x200" alt="Past Event 1">
+    <img src="https://via.placeholder.com/300x200" alt="Past Event 2">
+    <img src="https://via.placeholder.com/300x200" alt="Past Event 3">
+  </div>
+</div>
+
+<!-- 📢 Announcements -->
+<h3>📢 Latest Announcements</h3>
+<div class="announcements-section">
+  <div class="announcement-card">
+    <h4>🚨 Library Closed on April 25</h4>
+    <p>The library will be closed for maintenance.</p>
+    <a href="#" class="read-more">📖 Read More</a>
+  </div>
+
+  <div class="announcement-card">
+    <h4>🎉 New Digital Resources Available!</h4>
+    <p>Access thousands of e-books and audiobooks.</p>
+    <a href="#" class="read-more">📖 Read More</a>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌟 About Us: A Legacy of Knowledge -->
+<section class="about-us">
+  <div class="about-header">
+    <h2>📖 The Story of Our Library</h2>
+    <p>From the ashes of war to a beacon of knowledge, our journey is a testament to history, resilience, and innovation.</p>
+  </div>
+
+  <!-- 🕰️ Historical Timeline -->
+  <div class="zigzag-container">
+    <!-- Image - Text -->
+    <div class="zigzag-row">
+      <div class="zigzag-image">
+        <img src="https://via.placeholder.com/600x400" alt="WWII Library">
+      </div>
+      <div class="zigzag-text">
+        <h3>🕰️ 1942: A Library in the Shadows of War</h3>
+        <p>Amidst the chaos of WWII, historian <strong>Eleanor Whitaker</strong> saw the destruction of priceless literature. 
+        She gathered what she could from bombed-out buildings, smuggling books to a hidden basement, where refugees, students, and scholars secretly gathered.</p>
+        <p>This underground library became a safe haven, where knowledge defied war.</p>
+      </div>
+    </div>
+
+    <!-- Text - Image -->
+    <div class="zigzag-row reverse">
+      <div class="zigzag-text">
+        <h3>📚 1950: Post-War Renaissance</h3>
+        <p>With the war over, thousands of rare books and manuscripts were donated by survivors, displaced scholars, and European institutions. 
+        The library became a growing collection of human resilience, preserving the written word in a world rebuilding itself.</p>
+      </div>
+      <div class="zigzag-image">
+        <img src="https://via.placeholder.com/600x400" alt="Library Expansion">
+      </div>
+    </div>
+
+    <!-- Image - Text -->
+    <div class="zigzag-row">
+      <div class="zigzag-image">
+        <img src="https://via.placeholder.com/600x400" alt="Rare Manuscripts">
+      </div>
+      <div class="zigzag-text">
+        <h3>🔍 1975: The Archive Project</h3>
+        <p>Jonathan Whitaker, Eleanor’s son, launched the **Rare Manuscripts Collection**, preserving war diaries, underground newspapers, and handwritten letters from soldiers and survivors.</p>
+        <p>This effort saved over **500+ WWII journals**, now considered one of the largest personal war-time archives in existence.</p>
+      </div>
+    </div>
+
+    <!-- Text - Image -->
+    <div class="zigzag-row reverse">
+      <div class="zigzag-text">
+        <h3>🌍 2005: Digital Revolution</h3>
+        <p>With AI-driven technology, the library entered the modern age. More than **2 million historical documents** were digitized, allowing people across the world to access history at their fingertips.</p>
+        <p>Today, students, researchers, and history lovers can explore this priceless collection online.</p>
+      </div>
+      <div class="zigzag-image">
+        <img src="https://via.placeholder.com/600x400" alt="Digital Archives">
+      </div>
+    </div>
+
+    <!-- Centered Image -->
+    <div class="zigzag-centered">
+      <img src="https://via.placeholder.com/800x500" alt="Modern Library">
+    </div>
+
+    <!-- Centered Text -->
+    <div class="zigzag-centered-text">
+      <h3>📖 The Library of the Future</h3>
+      <p>What began as a hidden refuge during WWII is now a **global institution of learning**, ensuring history, knowledge, and literature remain accessible to future generations.</p>
+    </div>
+  </div>
+
+  <!-- 🎭 Meet the Team -->
+  <div class="team-container">
+    <h3>🎭 Guardians of Knowledge</h3>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://via.placeholder.com/150" alt="Eleanor Whitaker">
+        <h4>Eleanor Whitaker</h4>
+        <p>Founder (1942-1975)</p>
+      </div>
+      <div class="team-card">
+        <img src="https://via.placeholder.com/150" alt="Jonathan Whitaker">
+        <h4>Jonathan Whitaker</h4>
+        <p>Chief Curator (1975-2005)</p>
+      </div>
+      <div class="team-card">
+        <img src="https://via.placeholder.com/150" alt="Dr. Emily Carter">
+        <h4>Dr. Emily Carter</h4>
+        <p>Current Director</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 🌟 Why Choose Us? -->
+<section class="why-choose-us">
+  <div class="section-header">
+    <h2>✨ Why Choose Us?</h2>
+    <p>Experience excellence through innovation, knowledge, and world-class resources.</p>
+  </div>
+
+  <!-- 🚀 Features Grid -->
+  <div class="features-grid">
+    <!-- 📚 Vast Collection -->
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-book"></i></div>
+      <h3>📚 Vast Collection</h3>
+      <p>Over **2 million books**, journals, and rare manuscripts covering centuries of knowledge.</p>
+    </div>
+
+    <!-- 🎓 Expert Curation -->
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-user-graduate"></i></div>
+      <h3>🎓 Expert Curation</h3>
+      <p>Handpicked resources by **historians, researchers, and world-class educators**.</p>
+    </div>
+
+    <!-- 🌍 Global Access -->
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-globe"></i></div>
+      <h3>🌍 Global Access</h3>
+      <p>**Access digitized archives** from anywhere with **cutting-edge technology**.</p>
+    </div>
+
+    <!-- 🔍 AI-Powered Search -->
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-search"></i></div>
+      <h3>🔍 AI-Powered Search</h3>
+      <p>Smart AI-driven search helps you **find anything instantly**.</p>
+    </div>
+
+    <!-- 💡 Interactive Learning -->
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-lightbulb"></i></div>
+      <h3>💡 Interactive Learning</h3>
+      <p>Join **live workshops, exclusive lectures, and interactive learning experiences**.</p>
+    </div>
+
+    <!-- 🏆 Award-Winning Institution -->
+    <div class="feature-card">
+      <div class="icon"><i class="fas fa-award"></i></div>
+      <h3>🏆 Award-Winning Institution</h3>
+      <p>Recognized globally for **excellence in research, preservation, and education**.</p>
+    </div>
+  </div>
+
+  <!-- 🌟 Call to Action -->
+  <div class="cta-section">
+    <h3>📖 Join the Future of Knowledge</h3>
+    <p>Become a member and **access the world's greatest library** at your fingertips.</p>
+    <a href="#" class="cta-button">🚀 Get Started</a>
+  </div>
+</section>
+<!-- 🌟 The Developers -->
+<section class="the-developers">
+  <div class="section-header">
+    <h2>💻 The Developers</h2>
+    <p>The visionaries behind this platform, crafting excellence through innovation.</p>
+  </div>
+
+  <div class="developer-container">
+    <!-- Developer 1 -->
+    <div class="developer-card">
+      <img src="https://via.placeholder.com/400x400" alt="Madam Ji">
+      <div class="developer-info">
+        <h3>Syed.Saniya</h3>
+        <p>Lead Developer & Backend Specialist</p>
+        <div class="social-icons">
+          <a href="#" class="fab fa-github"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+          <a href="#" class="fab fa-twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Developer 2 -->
+    <div class="developer-card">
+      <img src="https://via.placeholder.com/400x400" alt="Gouri Sooryavamshi">
+      <div class="developer-info">
+        <h3>Gouri Sooryavamshi</h3>
+        <p>Frontend Designer & UI/UX Expert</p>
+        <div class="social-icons">
+          <a href="#" class="fab fa-github"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+          <a href="#" class="fab fa-twitter"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 🌟 Benefits of Reading -->
+<section class="benefits-of-reading">
+  <div class="section-header">
+    <h2>📖 Benefits of Reading</h2>
+    <p>Unlock the power of knowledge and imagination through the magic of books.</p>
+  </div>
+
+  <div class="benefits-grid">
+    <!-- Card 1: Knowledge Expansion -->
+    <div class="benefit-card">
+      <div class="icon"><i class="fas fa-brain"></i></div>
+      <h3>🧠 Expands Knowledge</h3>
+      <p>Books introduce new ideas, perspectives, and cultures, enriching your understanding of the world.</p>
+    </div>
+
+    <!-- Card 2: Cognitive Function -->
+    <div class="benefit-card">
+      <div class="icon"><i class="fas fa-lightbulb"></i></div>
+      <h3>💡 Boosts Brain Power</h3>
+      <p>Reading enhances memory, problem-solving skills, and mental agility.</p>
+    </div>
+
+    <!-- Card 3: Stress Reduction -->
+    <div class="benefit-card">
+      <div class="icon"><i class="fas fa-spa"></i></div>
+      <h3>🌿 Reduces Stress</h3>
+      <p>Immersing in a book can relax the mind, reduce anxiety, and promote mental well-being.</p>
+    </div>
+
+    <!-- Card 4: Improved Focus -->
+    <div class="benefit-card">
+      <div class="icon"><i class="fas fa-bullseye"></i></div>
+      <h3>🎯 Enhances Focus</h3>
+      <p>Regular reading strengthens concentration and improves attention span.</p>
+    </div>
+
+    <!-- Card 5: Vocabulary Growth -->
+    <div class="benefit-card">
+      <div class="icon"><i class="fas fa-book-open"></i></div>
+      <h3>📚 Expands Vocabulary</h3>
+      <p>Encountering new words and writing styles sharpens communication skills.</p>
+    </div>
+
+    <!-- Card 6: Creativity Boost -->
+    <div class="benefit-card">
+      <div class="icon"><i class="fas fa-paint-brush"></i></div>
+      <h3>🎨 Sparks Creativity</h3>
+      <p>Reading fiction and storytelling fuels imagination and innovative thinking.</p>
+    </div>
+  </div>
+</section>
+<!-- 🌟 Footer Section -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-column about">
+      <h3>About Us</h3>
+      <p>Empowering readers with knowledge, one book at a time. Join us to explore a world of endless possibilities.</p>
+      <div class="logo">
+        <i class="bx bx-book"></i>
+        <span>LibraryPro</span>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Resources -->
+    <div class="footer-column">
+      <h3>Resources</h3>
+      <ul>
+        <li><a href="#">E-books & Articles</a></li>
+        <li><a href="#">Book Recommendations</a></li>
+        <li><a href="#">Author Interviews</a></li>
+        <li><a href="#">Study Materials</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & FAQs -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:support@example.com">support@example.com</a></p>
+      <p><i class="fas fa-phone"></i> <a href="tel:+123456789">+1 234 567 89</a></p>
+      <p><i class="fas fa-question-circle"></i> <a href="#">Help Center</a></p>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <p>Sign up for exclusive book lists, discounts, and updates.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin-in"></a>
+        <a href="#" class="fab fa-youtube"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    <ul class="footer-bottom-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Sitemap</a></li>
+    </ul>
+  </div>
+</footer>
+<!-- GSAP Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="/Assets/js/script.js"></script>
+</body>
+</html>
